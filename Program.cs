@@ -6,16 +6,25 @@ namespace EmployeeWageProgram
     {
         static void Main(string[] args)
         {
-            int employee_is_present = 1;
+            //Constant constant
+            int is_full_time = 1;
+            int emp_rate_per_hour = 20;
+            //variable
+            int emp_wage = 0;
+            int emp_hrs = 0;
 
             Random random = new Random();
             int empCheck = random.Next(0, 2);
-            if (empCheck == employee_is_present)
-                Console.WriteLine("Employee is Present");
+            if (empCheck == is_full_time)
+            {
+                emp_hrs = 8;
+            }
             else
             {
-                Console.WriteLine("employee is absent");
+                emp_hrs = 0;
             }
+            emp_wage = emp_hrs * emp_rate_per_hour;
+            Console.WriteLine("Emp Wage is : " + emp_wage);
         }
     }
 }
