@@ -4,12 +4,13 @@ namespace EmployeeWageProgram
 {
     class Program
     {
+        //constant
+        public const int is_full_time = 1;
+        public const int is_part_time = 2;
+        public const int emp_rate_per_hour = 20;
         static void Main(string[] args)
         {
-            //Constant constant
-            int is_full_time = 1;
-            int is_part_time = 2;
-            int emp_rate_per_hour = 20;
+          
             
             //variable
             int emp_wage = 0;
@@ -17,17 +18,23 @@ namespace EmployeeWageProgram
 
             Random random = new Random();
             int empCheck = random.Next(0, 3);
-            if (empCheck == is_full_time)
-            {
+            switch(empCheck)
+            { 
+             case is_full_time:
+            
                 emp_hrs = 8;
-            }
-            else if(empCheck == is_part_time)
-            {
+                    break;
+
+
+            case is_part_time:
+            
                 emp_hrs = 4;
-            }
-            else
-            {
+                    break;
+
+
+            default:
                 emp_hrs = 0;
+                    break;
             }
             emp_wage = emp_hrs * emp_rate_per_hour;
             Console.WriteLine("Emp Wage is : " + emp_wage);
