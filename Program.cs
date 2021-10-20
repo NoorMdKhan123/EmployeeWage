@@ -6,7 +6,7 @@ namespace EmployeeWageProgram
     {
         static void Main(string[] args)
         {
-            //Constant constant
+            //constant
             int is_full_time = 1;
             int emp_rate_per_hour = 20;
             //variable
